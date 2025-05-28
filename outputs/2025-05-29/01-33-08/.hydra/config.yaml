@@ -1,11 +1,6 @@
-defaults:
-  - _self_
-
 data:
   path: data/raw/train.csv
-
 target_column: price
-
 model:
   type: lgbm
   save_path: models/lgb_model.pkl
@@ -13,4 +8,3 @@ model:
     learning_rate: 0.1
     n_estimators: 100
     max_depth: -1
-

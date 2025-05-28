@@ -10,7 +10,7 @@ def main(cfg: DictConfig):
     train_raw = load_csv(cfg.data.path)
     preprocessed_df = wrangle(train_raw)
     df_target = preprocessed_df['price']
-    predictor = train_model(preprocessed_df)
+    train_model(preprocessed_df,cfg)
     
 if __name__ == "__main__":
     main()
